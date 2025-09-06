@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoteForce - AI That Replaces Your $3K/Month Calling Team</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Replace your expensive calling team with AI that works 24/7. Save $36K+ yearly while tripling qualified leads. Used by 300+ real estate wholesalers.">
+    <meta name="keywords" content="AI calling, real estate wholesaling, lead generation, virtual assistants, cold calling automation">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="RemoteForce - Replace Your $3K/Month Calling Team With AI">
+    <meta property="og:description" content="300+ wholesalers save $36K+ yearly with AI calling that works 24/7 and never takes sick days.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://remoteforce.ai">
+    
+    <style>
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0052CC;
+            --secondary: #00D9FF;
+            --accent: #FF6B35;
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --dark: #0F172A;
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-300: #CBD5E1;
+            --gray-600: #475569;
+            --gray-900: #0F172A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-900);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Modern Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 102, 255, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 102, 255, 0.1);
+            border: 1px solid rgba(0, 102, 255, 0.2);
+            color: var(--secondary);
+            padding: 8px 16px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: #94A3B8;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 102, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-top: 64px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--secondary);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #94A3B8;
+            margin-top: 4px;
+        }
+
+        /* Modern Card Styles */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, var(--gray-50) 100%);
+            border: 1px solid var(--gray-200);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-dark {
+            background: var(--dark);
+            color: white;
+        }
+
+        .section-gray {
+            background: var(--gray-50);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-dark .section-subtitle {
+            color: #94A3B8;
+        }
+
+        /* Lead Magnet */
+        .lead-magnet {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            border-radius: 24px;
+            padding: 48px;
+            text-align: center;
+            max-width: 800px;
+            margin: -40px auto 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.3);
+        }
+
+        .lead-magnet h3 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .lead-magnet p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .opt-in-form {
+            display: flex;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-input {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .form-submit {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Problem Cards */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .problem-card {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            border-left: 4px solid var(--danger);
+        }
+
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .problem-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--danger);
+            margin-bottom: 12px;
+        }
+
+        .problem-cost {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--danger);
+            margin-bottom: 16px;
+        }
+
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .testimonial {
+            background: white;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--gray-100);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 24px;
+            font-size: 60px;
+            color: var(--primary);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .author-info h4 {
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            color: var(--gray-600);
+            font-size: 14px;
+        }
+
+        .testimonial-result {
+            background: linear-gradient(135deg, var(--success) 0%, #16A34A 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 16px;
+            display: inline-block;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            border: 2px solid var(--gray-200);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            background: linear-gradient(135deg, #ffffff 0%, #F0F9FF 100%);
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .plan-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 8px;
+        }
+
+        .plan-description {
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+
+        .plan-price {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .plan-period {
+            color: var(--gray-600);
+            margin-bottom: 16px;
+        }
+
+        .plan-savings {
+            background: linear-gradient(135deg, var(--danger) 0%, #DC2626 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            display: inline-block;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            background: var(--success);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .plan-cta {
+            width: 100%;
+            background: var(--gray-900);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan-cta:hover {
+            background: var(--gray-600);
+            transform: translateY(-2px);
+        }
+
+        .featured .plan-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+
+        .featured .plan-cta:hover {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #003D99 100%);
+        }
+
+        /* Guarantee */
+        .guarantee {
+            background: linear-gradient(135deg, var(--success) 0%, #16A34A 100%);
+            color: white;
+            border-radius: 24px;
+            padding: 64px;
+            text-align: center;
+            margin: 64px 0;
+        }
+
+        .guarantee-badge {
+            width: 120px;
+            height: 120px;
+            background: white;
+            color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-weight: 900;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.2;
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            border: 1px solid var(--gray-200);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--gray-900);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 24px 24px;
+            color: var(--gray-600);
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--gray-600);
+        }
+
+        .modal-close:hover {
+            color: var(--danger);
+        }
+
+        .modal h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--gray-900);
+        }
+
+        .modal form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .modal input, .modal select {
+            padding: 12px;
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .modal input:focus, .modal select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .modal button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .success-message {
+            background: #10B981;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            text-align: center;
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-cta-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+            
+            .opt-in-form {
+                flex-direction: column;
+                max-width: 100%;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+                order: -1;
+            }
+            
+            .lead-magnet {
+                margin: -20px 16px 0;
+                padding: 32px 24px;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .modal-content {
+                margin: 10% auto;
+                padding: 30px 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-primary { color: var(--primary); }
+        .text-success { color: var(--success); }
+        .text-danger { color: var(--danger); }
+        .font-bold { font-weight: 700; }
+        .font-black { font-weight: 900; }
+        .mb-4 { margin-bottom: 16px; }
+        .mb-8 { margin-bottom: 32px; }
+        .mt-8 { margin-top: 32px; }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 64px 0 32px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-section h4 {
+            color: var(--secondary);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .footer-section a {
+            color: #94A3B8;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #334155;
+            padding-top: 32px;
+            text-align: center;
+            color: #94A3B8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">RemoteForce</div>
+                <a href="#pricing" class="nav-cta">Get Started Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>🚀</span>
+                    <span>Trusted by 300+ Wholesalers</span>
+                </div>
+                
+                <h1 class="hero-title">Fire Your $3K/Month Calling Team</h1>
+                <p class="hero-subtitle">
+                    AI agents that work 24/7, never take sick days, and generate 3X more qualified seller leads for 90% less cost
+                </p>
+                
+                <div class="hero-cta-group">
+                    <a href="#pricing" class="btn-primary">
+                        <span>Replace My Team Now</span>
+                        <span>→</span>
+                    </a>
+                    <a href="#free-guide" class="btn-secondary">
+                        <span>Get Free Guide</span>
+                        <span>📖</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">89%</span>
+                        <span class="stat-label">Connection Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30 sec</span>
+                        <span class="stat-label">Speed to Lead</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$36K+</span>
+                        <span class="stat-label">Annual Savings</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Never Stops</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Magnet -->
+    <section class="section">
+        <div class="container">
+            <div id="free-guide" class="lead-magnet">
+                <h3>The $47K Wholesaler Savings Blueprint</h3>
+                <p>Download the exact system 312 wholesalers used to eliminate their calling teams and double qualified leads</p>
+                
+                <form class="opt-in-form" id="leadForm">
+                    <input type="email" class="form-input" placeholder="Enter your email" required>
+                    <button type="submit" class="form-submit">Get Free Access</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Stop Bleeding Money on Expensive Teams</h2>
+                <p class="section-subtitle">Every month you delay costs you $3,000+ and dozens of missed opportunities</p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <span class="problem-icon">💸</span>
+                    <h3 class="problem-title">Expensive Team Costs</h3>
+                    <div class="problem-cost">$2K-5K/month</div>
+                    <p>Plus training, recruiting, turnover, sick days, and management overhead that never ends.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="problem-icon">😴</span>
+                    <h3 class="problem-title">Missing Night/Weekend Leads</h3>
+                    <div class="problem-cost">40% Lost Revenue</div>
+                    <p>Your team sleeps while motivated sellers call. Competitors with 24/7 systems win those deals.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="problem-icon">📉</span>
+                    <h3 class="problem-title">Inconsistent Quality</h3>
+                    <div class="problem-cost">60% Conversion Drop</div>
+                    <p>Different scripts, bad days, wrong approaches. Your brand suffers from human inconsistency.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <span class="problem-icon">⏰</span>
+                    <h3 class="problem-title">Slow Response Times</h3>
+                    <div class="problem-cost">5X Lower Conversions</div>
+                    <p>Studies prove: every minute delay reduces conversion by 10%. Your team takes hours to respond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">312 Wholesalers Replaced Their Teams</h2>
+                <p class="section-subtitle">See real results from real estate pros who made the switch</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "I was spending $4,200/month on a 3-person team that missed calls and used wrong scripts. RemoteForce cut my costs to $397/month and TRIPLED my appointments. The ROI is insane."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Michael Kowalski</h4>
+                            <p>Houston Wholesale Properties</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">Saved $46,800/year + 3X appointments</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "30-second response time vs my old team's 3+ hours. I'm closing deals competitors never even get to pitch. Plus it never gets sick or takes vacation!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SL</div>
+                        <div class="author-info">
+                            <h4>Sarah Lopez</h4>
+                            <p>Phoenix Real Estate Investors</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">30 sec response vs 3+ hours</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        "Went from 12 qualified leads per month to 47 in 90 days. The AI handles objections better than my best human caller ever did. Zero management headaches."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DJ</div>
+                        <div class="author-info">
+                            <h4>David Johnson</h4>
+                            <p>Atlanta Investment Group</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">12 to 47 leads/month (4X increase)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your AI Team</h2>
+                <p class="section-subtitle">All plans include setup, training, and our success guarantee</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">Starter</div>
+                    <div class="plan-description">Perfect for testing AI calling</div>
+                    <div class="plan-price">$197</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-savings">Save $1,803/month</div>
+                    
+                    <ul class="plan-features">
+                        <li>1,000 AI calls/month</li>
+                        <li>Basic script templates</li>
+                        <li>CRM integration</li>
+                        <li>Email support</li>
+                        <li>Basic analytics</li>
+                        <li>60-day guarantee</li>
+                    </ul>
+                    
+                    <button class="plan-cta" onclick="openModal('starter')">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="plan-name">Professional</div>
+                    <div class="plan-description">Most popular for established wholesalers</div>
+                    <div class="plan-price">$397</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-savings">Save $2,603/month</div>
+                    
+                    <ul class="plan-features">
+                        <li>3,000 AI calls/month</li>
+                        <li>Custom market scripts</li>
+                        <li>Multiple CRM integrations</li>
+                        <li>Priority support</li>
+                        <li>Advanced analytics</li>
+                        <li>A/B script testing</li>
+                        <li>Auto appointment booking</li>
+                        <li>Performance guarantee</li>
+                    </ul>
+                    
+                    <button class="plan-cta" onclick="openModal('professional')">Start Free Trial</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Enterprise</div>
+                    <div class="plan-description">For high-volume operations</div>
+                    <div class="plan-price">$697</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-savings">Save $3,303/month</div>
+                    
+                    <ul class="plan-features">
+                        <li>Unlimited AI calls</li>
+                        <li>Custom script development</li>
+                        <li>White-label option</li>
+                        <li>Dedicated success manager</li>
+                        <li>Custom integrations</li>
+                        <li>Multi-location support</li>
+                        <li>24/7 phone support</li>
+                        <li>Quarterly strategy calls</li>
+                    </ul>
+                    
+                    <button class="plan-cta" onclick="openModal('enterprise')">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="section">
+        <div class="container">
+            <div class="guarantee">
+                <div class="guarantee-badge">
+                    90-DAY<br>GUARANTEE
+                </div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Double Your Leads or Work for FREE</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    <strong>If you don't get 2X more qualified seller appointments in 90 days, we'll refund everything AND work for free until you do.</strong>
+                </p>
+                <p>That's how confident we are in your success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Common Questions</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How quickly will I see results vs my current team?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Most wholesalers see immediate improvement in response time (30 seconds vs hours) and 50-200% more qualified appointments within 30 days. The AI works 24/7 from day one with perfect consistency.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Does it really sound human?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Our AI uses advanced voice synthesis that's virtually indistinguishable from human speech. It's trained on thousands of successful wholesaler conversations and handles objections better than most human callers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What if my CRM isn't supported?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>We integrate with 99% of CRMs including HubSpot, Salesforce, and custom systems. Our team handles all integration work at no extra cost.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How many leads can it handle?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Unlimited. While human callers make 50-80 calls per day, our AI handles 1,000+ simultaneously. Most clients 3-5X their calling capacity immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section-dark">
+        <div class="container text-center">
+            <h2 style="font-size: 3rem; margin-bottom: 1rem;">Ready to Fire Your Expensive Team?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem; color: #94A3B8;">
+                Join 312+ wholesalers saving $30,000+ yearly with AI calling
+            </p>
+            <button class="btn-primary" style="font-size: 1.25rem; padding: 20px 40px;" onclick="openModal('professional')">
+                Start Your Free Trial Today
+            </button>
+            <p style="margin-top: 1rem; color: #94A3B8; font-size: 0.9rem;">
+                90-day guarantee • Setup in 24 hours • Cancel anytime
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>RemoteForce</h4>
+                    <p style="color: #94A3B8;">AI calling systems that replace expensive teams and double qualified leads for real estate wholesalers.</p>
+                    <p style="margin-top: 1rem; color: #94A3B8;">
+                        📞 1-800-AI-CALLS<br>
+                        📧 support@remoteforce.ai
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <a onclick="scrollToSection('pricing')">Pricing</a>
+                    <a onclick="scrollToSection('free-guide')">Free Guide</a>
+                    <a onclick="openModal('demo')">Book Demo</a>
+                    <a onclick="openCaseStudies()">Case Studies</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a onclick="openROICalculator()">ROI Calculator</a>
+                    <a onclick="openBlog()">Wholesaling Blog</a>
+                    <a onclick="openScripts()">Call Scripts</a>
+                    <a onclick="openIntegrations()">Integrations</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a onclick="openSupport()">Help Center</a>
+                    <a onclick="openContact()">Contact Us</a>
+                    <a onclick="openCompliance()">TCPA Compliance</a>
+                    <a onclick="openGuarantee()">Guarantee</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RemoteForce. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Sign-ups and Contact Forms -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="successMessage" class="success-message"></div>
+            <h3 id="modalTitle">Start Your Free Trial</h3>
+            <form id="signupForm">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="company" placeholder="Company Name" required>
+                <select id="currentTeamSize" required>
+                    <option value="">Current Team Size</option>
+                    <option value="1-2">1-2 callers</option>
+                    <option value="3-5">3-5 callers</option>
+                    <option value="6-10">6-10 callers</option>
+                    <option value="10+">10+ callers</option>
+                    <option value="none">No current team</option>
+                </select>
+                <select id="monthlyLeads" required>
+                    <option value="">Monthly Lead Volume</option>
+                    <option value="1-50">1-50 leads</option>
+                    <option value="51-100">51-100 leads</option>
+                    <option value="101-500">101-500 leads</option>
+                    <option value="500+">500+ leads</option>
+                </select>
+                <input type="hidden" id="selectedPlan" value="">
+                <button type="submit">Start Free Trial</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openModal(plan = 'professional') {
+            document.getElementById('selectedPlan').value = plan;
+            document.getElementById('modalTitle').textContent = `Start Your ${plan.charAt(0).toUpperCase() + plan.slice(1)} Trial`;
+            document.getElementById('signupModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('signupModal').style.display = 'none';
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('signupForm').reset();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('signupModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+            
+            if (answer.classList.contains('active')) {
+                answer.classList.remove('active');
+                icon.textContent = '+';
+            } else {
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-icon').forEach(item => {
+                    item.textContent = '+';
+                });
+                
+                answer.classList.add('active');
+                icon.textContent = '−';
+            }
+        }
+
+        // Lead Form Submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Simulate successful submission
+            alert('✅ Success! Check your email for the Wholesaler Savings Blueprint.\n\nWe\'ve also added you to our weekly case study series.');
+            this.reset();
+            
+            // In real implementation, you'd send to your email service here
+            // Example: submitToMailchimp(email) or submitToConvertKit(email)
+        });
+
+        // Signup Form Submission
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                currentTeamSize: document.getElementById('currentTeamSize').value,
+                monthlyLeads: document.getElementById('monthlyLeads').value,
+                selectedPlan: document.getElementById('selectedPlan').value
+            };
+            
+            // Show success message
+            document.getElementById('successMessage').innerHTML = `
+                <strong>🎉 Trial Started Successfully!</strong><br>
+                We'll contact you within 24 hours to set up your AI calling system.<br>
+                Check your email for next steps and setup instructions.
+            `;
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Hide form
+            document.getElementById('signupForm').style.display = 'none';
+            
+            // In real implementation, send data to your CRM/backend
+            console.log('Form submitted:', formData);
+            
+            // Auto-close modal after 3 seconds
+            setTimeout(() => {
+                closeModal();
+                document.getElementById('signupForm').style.display = 'block';
+            }, 3000);
+        });
+
+        // Utility Functions for Footer Links
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function openCaseStudies() {
+            // In real implementation, link to actual case studies page
+            alert('📈 Case Studies\n\nSee detailed breakdowns of how our clients:\n• Save $30K-60K annually\n• Triple their qualified leads\n• Eliminate team management headaches\n\nWould you like us to email you our top 5 case studies?');
+        }
+
+        function openROICalculator() {
+            // In real implementation, open actual calculator
+            const currentCost = prompt('ROI Calculator\n\nWhat do you currently spend monthly on calling teams/VAs?\n\nEnter amount (just the number):');
+            if (currentCost && !isNaN(currentCost)) {
+                const annual = currentCost * 12;
+                const savings = annual - (397 * 12);
+                alert(`💰 Your Potential Savings:\n\nCurrent annual cost: $${annual.toLocaleString()}\nRemoteForce annual cost: $4,764\nYour annual savings: $${savings.toLocaleString()}\n\nROI: ${Math.round((savings/4764)*100)}%\n\nReady to start saving?`);
+            }
+        }
+
+        function openBlog() {
+            alert('📝 Coming Soon!\n\nOur wholesaling blog will feature:\n• AI calling best practices\n• Market analysis tips\n• Lead generation strategies\n• Industry trends\n\nSubscribe to our newsletter to be notified when it launches!');
+        }
+
+        function openScripts() {
+            alert('📞 Call Scripts\n\nGet access to our proven scripts:\n• Opening statements that get attention\n• Objection handling responses\n• Closing techniques that book appointments\n\nIncluded free with all plans!\n\nStart your trial to get immediate access.');
+        }
+
+        function openIntegrations() {
+            alert('🔗 CRM Integrations\n\nWe integrate with:\n• HubSpot\n• Salesforce\n• Pipedrive\n• REI Network\n• Podio\n• Custom systems\n\n99% integration success rate\nSetup included at no extra cost\n\nStart your trial to connect your CRM!');
+        }
+
+        function openSupport() {
+            alert('🆘 24/7 Support\n\nGet help with:\n• Technical setup\n• Script optimization\n• Performance analysis\n• Best practices\n\nEmail: support@remoteforce.ai\nPhone: 1-800-AI-CALLS\n\nAverage response time: Under 2 hours');
+        }
+
+        function openContact() {
+            alert('📞 Contact RemoteForce\n\nPhone: 1-800-AI-CALLS\nEmail: support@remoteforce.ai\n\nBusiness Hours: 24/7\n(AI never sleeps, and neither do we!)\n\nPrefer to start a trial? Click any "Start Free Trial" button above.');
+        }
+
+        function openCompliance() {
+            alert('⚖️ TCPA Compliance\n\nWe ensure:\n• Proper call recording disclosures\n• DNC list checking\n• Opt-out mechanisms\n• Call time restrictions\n• Detailed call logs\n\nYour compliance is our priority.\nAll calls meet federal and state requirements.');
+        }
+
+        function openGuarantee() {
+            alert('✅ Our 90-Day Guarantee\n\n"Double your qualified seller appointments in 90 days or we work for FREE"\n\n• Full refund if not satisfied\n• Continue service free until goals met\n• $500 payment for your time\n• No questions asked\n\nWe track everything to ensure measurable results.');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .testimonial, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Track scroll depth for analytics
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                // In real implementation, send to analytics
+                if (maxScroll >= 25 && maxScroll < 30) console.log('User scrolled 25%');
+                if (maxScroll >= 50 && maxScroll < 55) console.log('User scrolled 50%');
+                if (maxScroll >= 75 && maxScroll < 80) console.log('User scrolled 75%');
+                if (maxScroll >= 90) console.log('User scrolled 90%');
+            }
+        });
+    </script>
+</body>
+</html>
